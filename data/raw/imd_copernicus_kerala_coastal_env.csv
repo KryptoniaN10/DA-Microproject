@@ -1,0 +1,169 @@
+date,year,month,season,monsoon_phase,sea_surface_temperature_c,rainfall_mm,wind_speed_ms,wave_height_m,upwelling_index,chlorophyll_a_mg_m3
+2012-01-01,2012,1,Winter / Post-Monsoon,Northeast/Dry,28.32,7.8,4.1,1.48,1.16,0.91
+2012-02-01,2012,2,Winter / Post-Monsoon,Northeast/Dry,28.77,11.5,3.4,1.32,0.93,0.58
+2012-03-01,2012,3,Pre-Monsoon / Summer,Pre-Monsoon,29.29,19.3,3.3,1.31,1.05,0.79
+2012-04-01,2012,4,Pre-Monsoon / Summer,Pre-Monsoon,30.52,77.2,5.0,1.47,1.52,0.98
+2012-05-01,2012,5,Pre-Monsoon / Summer,Pre-Monsoon,30.32,246.6,6.3,1.7,1.64,1.33
+2012-06-01,2012,6,Southwest Monsoon,Southwest Monsoon,28.42,588.9,6.7,3.61,9.75,5.97
+2012-07-01,2012,7,Southwest Monsoon,Southwest Monsoon,27.6,763.4,8.4,3.55,12.85,7.49
+2012-08-01,2012,8,Southwest Monsoon,Southwest Monsoon,26.74,289.1,6.5,2.51,9.81,5.42
+2012-09-01,2012,9,Southwest Monsoon,Southwest Monsoon,27.84,330.7,5.8,1.86,8.89,5.16
+2012-10-01,2012,10,Post-Monsoon,Post-Monsoon,28.49,328.5,3.6,1.19,1.08,1.61
+2012-11-01,2012,11,Post-Monsoon,Post-Monsoon,29.06,191.9,3.8,1.38,1.11,1.43
+2012-12-01,2012,12,Winter / Post-Monsoon,Northeast/Dry,28.23,36.7,3.8,0.69,1.12,0.96
+2013-01-01,2013,1,Winter / Post-Monsoon,Northeast/Dry,28.6,7.0,3.3,0.56,0.8,0.64
+2013-02-01,2013,2,Winter / Post-Monsoon,Northeast/Dry,28.47,9.1,3.9,0.72,0.96,0.79
+2013-03-01,2013,3,Pre-Monsoon / Summer,Pre-Monsoon,29.4,25.6,3.6,1.1,1.21,1.11
+2013-04-01,2013,4,Pre-Monsoon / Summer,Pre-Monsoon,30.12,87.7,3.8,0.96,1.41,1.05
+2013-05-01,2013,5,Pre-Monsoon / Summer,Pre-Monsoon,29.84,306.7,5.8,2.05,1.67,1.57
+2013-06-01,2013,6,Southwest Monsoon,Southwest Monsoon,28.52,614.9,8.1,3.48,12.14,7.09
+2013-07-01,2013,7,Southwest Monsoon,Southwest Monsoon,27.7,587.9,8.5,4.07,12.71,7.2
+2013-08-01,2013,8,Southwest Monsoon,Southwest Monsoon,27.67,394.9,6.8,2.46,9.64,5.61
+2013-09-01,2013,9,Southwest Monsoon,Southwest Monsoon,28.29,274.4,5.3,2.11,7.48,4.2
+2013-10-01,2013,10,Post-Monsoon,Post-Monsoon,28.79,218.6,3.3,1.35,0.83,1.22
+2013-11-01,2013,11,Post-Monsoon,Post-Monsoon,28.98,167.2,4.0,0.92,1.51,1.41
+2013-12-01,2013,12,Winter / Post-Monsoon,Northeast/Dry,28.38,33.9,3.3,1.21,1.1,0.97
+2014-01-01,2014,1,Winter / Post-Monsoon,Northeast/Dry,27.93,6.7,4.1,0.81,1.43,1.1
+2014-02-01,2014,2,Winter / Post-Monsoon,Northeast/Dry,28.56,14.5,4.2,0.7,1.42,1.22
+2014-03-01,2014,3,Pre-Monsoon / Summer,Pre-Monsoon,29.3,19.8,3.7,1.28,1.04,1.05
+2014-04-01,2014,4,Pre-Monsoon / Summer,Pre-Monsoon,30.0,79.0,3.3,1.27,1.04,0.61
+2014-05-01,2014,5,Pre-Monsoon / Summer,Pre-Monsoon,30.14,259.9,4.6,1.68,1.56,1.33
+2014-06-01,2014,6,Southwest Monsoon,Southwest Monsoon,28.69,480.4,8.4,3.2,12.56,7.11
+2014-07-01,2014,7,Southwest Monsoon,Southwest Monsoon,27.65,509.6,7.9,3.39,11.67,6.62
+2014-08-01,2014,8,Southwest Monsoon,Southwest Monsoon,27.15,482.4,7.6,2.53,11.02,6.31
+2014-09-01,2014,9,Southwest Monsoon,Southwest Monsoon,27.89,281.5,6.0,1.88,8.88,5.07
+2014-10-01,2014,10,Post-Monsoon,Post-Monsoon,28.72,355.1,3.9,1.19,1.1,1.49
+2014-11-01,2014,11,Post-Monsoon,Post-Monsoon,28.96,190.7,3.2,1.03,0.73,1.19
+2014-12-01,2014,12,Winter / Post-Monsoon,Northeast/Dry,28.65,30.7,3.1,1.4,1.27,0.95
+2015-01-01,2015,1,Winter / Post-Monsoon,Northeast/Dry,29.02,8.2,3.0,0.9,0.88,0.8
+2015-02-01,2015,2,Winter / Post-Monsoon,Northeast/Dry,29.64,7.2,3.4,1.03,1.17,0.81
+2015-03-01,2015,3,Pre-Monsoon / Summer,Pre-Monsoon,29.9,21.0,4.6,1.43,1.96,1.08
+2015-04-01,2015,4,Pre-Monsoon / Summer,Pre-Monsoon,30.71,82.4,4.8,1.21,1.75,1.02
+2015-05-01,2015,5,Pre-Monsoon / Summer,Pre-Monsoon,30.46,286.9,5.5,1.76,1.95,1.51
+2015-06-01,2015,6,Southwest Monsoon,Southwest Monsoon,28.75,597.7,7.7,3.13,11.54,6.84
+2015-07-01,2015,7,Southwest Monsoon,Southwest Monsoon,28.75,662.2,7.9,3.45,11.82,7.02
+2015-08-01,2015,8,Southwest Monsoon,Southwest Monsoon,28.29,360.8,7.1,3.14,10.16,5.72
+2015-09-01,2015,9,Southwest Monsoon,Southwest Monsoon,28.22,157.4,5.6,1.98,8.25,4.45
+2015-10-01,2015,10,Post-Monsoon,Post-Monsoon,29.74,336.7,3.8,1.21,0.92,1.24
+2015-11-01,2015,11,Post-Monsoon,Post-Monsoon,29.69,164.8,3.9,1.04,0.67,1.02
+2015-12-01,2015,12,Winter / Post-Monsoon,Northeast/Dry,29.24,30.8,3.9,1.35,1.33,1.01
+2016-01-01,2016,1,Winter / Post-Monsoon,Northeast/Dry,28.92,10.5,4.4,1.39,0.9,0.9
+2016-02-01,2016,2,Winter / Post-Monsoon,Northeast/Dry,29.46,11.0,3.8,0.71,1.82,1.22
+2016-03-01,2016,3,Pre-Monsoon / Summer,Pre-Monsoon,30.34,24.9,3.2,1.25,1.08,0.72
+2016-04-01,2016,4,Pre-Monsoon / Summer,Pre-Monsoon,30.77,112.4,4.8,1.11,0.83,0.61
+2016-05-01,2016,5,Pre-Monsoon / Summer,Pre-Monsoon,30.76,262.9,4.8,1.6,1.27,1.11
+2016-06-01,2016,6,Southwest Monsoon,Southwest Monsoon,29.39,849.2,7.9,3.17,11.56,7.31
+2016-07-01,2016,7,Southwest Monsoon,Southwest Monsoon,27.91,589.9,8.5,3.21,12.81,7.35
+2016-08-01,2016,8,Southwest Monsoon,Southwest Monsoon,27.83,580.7,7.4,2.58,11.52,6.65
+2016-09-01,2016,9,Southwest Monsoon,Southwest Monsoon,28.91,229.6,5.5,2.1,8.61,4.65
+2016-10-01,2016,10,Post-Monsoon,Post-Monsoon,29.49,345.5,4.2,1.19,0.78,1.41
+2016-11-01,2016,11,Post-Monsoon,Post-Monsoon,29.58,126.2,3.5,1.23,1.56,1.22
+2016-12-01,2016,12,Winter / Post-Monsoon,Northeast/Dry,28.77,38.4,3.1,0.77,1.57,1.13
+2017-01-01,2017,1,Winter / Post-Monsoon,Northeast/Dry,28.0,8.8,4.8,0.85,1.34,1.04
+2017-02-01,2017,2,Winter / Post-Monsoon,Northeast/Dry,28.0,9.5,3.0,1.03,1.0,0.86
+2017-03-01,2017,3,Pre-Monsoon / Summer,Pre-Monsoon,29.51,26.0,2.9,1.4,0.69,0.59
+2017-04-01,2017,4,Pre-Monsoon / Summer,Pre-Monsoon,30.32,91.4,4.9,1.34,1.15,0.84
+2017-05-01,2017,5,Pre-Monsoon / Summer,Pre-Monsoon,30.15,279.4,5.4,1.68,2.27,1.8
+2017-06-01,2017,6,Southwest Monsoon,Southwest Monsoon,28.32,699.7,7.4,3.31,10.54,6.43
+2017-07-01,2017,7,Southwest Monsoon,Southwest Monsoon,27.31,754.8,8.0,3.63,11.98,7.23
+2017-08-01,2017,8,Southwest Monsoon,Southwest Monsoon,27.17,374.5,6.9,2.58,10.15,5.8
+2017-09-01,2017,9,Southwest Monsoon,Southwest Monsoon,27.51,259.9,4.6,1.83,6.63,3.98
+2017-10-01,2017,10,Post-Monsoon,Post-Monsoon,28.83,351.2,4.0,1.19,1.26,1.85
+2017-11-01,2017,11,Post-Monsoon,Post-Monsoon,28.83,165.9,3.6,0.81,1.56,1.44
+2017-12-01,2017,12,Winter / Post-Monsoon,Northeast/Dry,28.38,35.8,4.1,1.03,1.28,0.89
+2018-01-01,2018,1,Winter / Post-Monsoon,Northeast/Dry,28.27,10.0,2.7,1.2,1.45,1.1
+2018-02-01,2018,2,Winter / Post-Monsoon,Northeast/Dry,28.61,10.6,3.6,1.21,1.27,1.09
+2018-03-01,2018,3,Pre-Monsoon / Summer,Pre-Monsoon,29.04,28.4,3.3,1.28,0.59,0.84
+2018-04-01,2018,4,Pre-Monsoon / Summer,Pre-Monsoon,30.26,81.9,4.3,1.2,0.71,0.76
+2018-05-01,2018,5,Pre-Monsoon / Summer,Pre-Monsoon,30.11,262.5,5.3,2.23,1.57,1.43
+2018-06-01,2018,6,Southwest Monsoon,Southwest Monsoon,28.5,809.8,8.3,3.6,12.39,7.72
+2018-07-01,2018,7,Southwest Monsoon,Southwest Monsoon,27.37,723.8,8.4,3.15,12.79,7.59
+2018-08-01,2018,8,Southwest Monsoon,Southwest Monsoon,27.42,371.4,7.8,2.58,10.79,6.05
+2018-09-01,2018,9,Southwest Monsoon,Southwest Monsoon,27.8,240.5,6.3,2.6,9.52,5.12
+2018-10-01,2018,10,Post-Monsoon,Post-Monsoon,28.71,262.1,4.3,1.09,1.58,1.63
+2018-11-01,2018,11,Post-Monsoon,Post-Monsoon,29.05,194.9,4.2,0.85,1.39,1.5
+2018-12-01,2018,12,Winter / Post-Monsoon,Northeast/Dry,28.57,36.0,3.8,1.29,1.15,1.05
+2019-01-01,2019,1,Winter / Post-Monsoon,Northeast/Dry,28.24,9.3,3.2,0.85,0.38,0.53
+2019-02-01,2019,2,Winter / Post-Monsoon,Northeast/Dry,28.35,10.7,3.2,0.5,1.0,0.82
+2019-03-01,2019,3,Pre-Monsoon / Summer,Pre-Monsoon,29.51,23.6,4.0,1.27,1.01,0.82
+2019-04-01,2019,4,Pre-Monsoon / Summer,Pre-Monsoon,30.4,119.2,3.7,1.13,1.21,0.89
+2019-05-01,2019,5,Pre-Monsoon / Summer,Pre-Monsoon,30.02,249.7,4.9,2.33,1.41,1.37
+2019-06-01,2019,6,Southwest Monsoon,Southwest Monsoon,28.94,709.7,7.6,3.51,11.95,7.12
+2019-07-01,2019,7,Southwest Monsoon,Southwest Monsoon,27.38,552.8,7.6,3.78,11.7,6.77
+2019-08-01,2019,8,Southwest Monsoon,Southwest Monsoon,26.7,444.6,6.7,2.69,10.05,5.66
+2019-09-01,2019,9,Southwest Monsoon,Southwest Monsoon,27.72,214.5,6.0,1.72,9.15,4.88
+2019-10-01,2019,10,Post-Monsoon,Post-Monsoon,28.86,279.9,4.5,1.38,1.3,1.3
+2019-11-01,2019,11,Post-Monsoon,Post-Monsoon,28.63,168.1,4.0,0.89,1.09,1.17
+2019-12-01,2019,12,Winter / Post-Monsoon,Northeast/Dry,28.04,36.2,3.2,1.21,0.73,0.49
+2020-01-01,2020,1,Winter / Post-Monsoon,Northeast/Dry,27.64,9.1,3.8,1.27,1.01,0.98
+2020-02-01,2020,2,Winter / Post-Monsoon,Northeast/Dry,28.37,12.4,4.2,0.93,0.97,1.12
+2020-03-01,2020,3,Pre-Monsoon / Summer,Pre-Monsoon,29.62,23.2,3.3,1.03,0.65,0.53
+2020-04-01,2020,4,Pre-Monsoon / Summer,Pre-Monsoon,30.09,81.4,3.7,1.11,0.99,0.94
+2020-05-01,2020,5,Pre-Monsoon / Summer,Pre-Monsoon,29.6,302.9,5.7,2.1,1.67,1.88
+2020-06-01,2020,6,Southwest Monsoon,Southwest Monsoon,28.27,668.3,8.4,3.53,12.23,7.34
+2020-07-01,2020,7,Southwest Monsoon,Southwest Monsoon,27.18,358.8,8.4,3.39,12.12,6.65
+2020-08-01,2020,8,Southwest Monsoon,Southwest Monsoon,27.4,511.6,6.8,3.21,10.49,6.12
+2020-09-01,2020,9,Southwest Monsoon,Southwest Monsoon,27.34,251.7,5.2,2.4,7.92,4.48
+2020-10-01,2020,10,Post-Monsoon,Post-Monsoon,28.52,238.6,2.9,1.39,0.95,1.25
+2020-11-01,2020,11,Post-Monsoon,Post-Monsoon,29.0,172.0,3.5,1.2,1.07,1.15
+2020-12-01,2020,12,Winter / Post-Monsoon,Northeast/Dry,28.05,38.9,4.0,1.3,1.56,1.14
+2021-01-01,2021,1,Winter / Post-Monsoon,Northeast/Dry,28.22,9.3,3.3,0.94,1.14,1.05
+2021-02-01,2021,2,Winter / Post-Monsoon,Northeast/Dry,28.2,11.4,3.7,0.8,1.29,0.91
+2021-03-01,2021,3,Pre-Monsoon / Summer,Pre-Monsoon,29.7,24.2,3.6,0.72,1.04,0.77
+2021-04-01,2021,4,Pre-Monsoon / Summer,Pre-Monsoon,30.14,98.4,4.4,1.01,1.7,1.2
+2021-05-01,2021,5,Pre-Monsoon / Summer,Pre-Monsoon,30.03,256.1,5.4,2.13,1.5,1.5
+2021-06-01,2021,6,Southwest Monsoon,Southwest Monsoon,28.95,690.0,8.2,3.43,12.25,7.29
+2021-07-01,2021,7,Southwest Monsoon,Southwest Monsoon,27.21,640.8,7.9,3.47,11.55,6.56
+2021-08-01,2021,8,Southwest Monsoon,Southwest Monsoon,27.73,445.8,6.9,2.75,10.28,5.95
+2021-09-01,2021,9,Southwest Monsoon,Southwest Monsoon,27.99,239.4,4.9,1.93,7.84,4.27
+2021-10-01,2021,10,Post-Monsoon,Post-Monsoon,28.18,270.1,4.2,1.82,0.92,1.22
+2021-11-01,2021,11,Post-Monsoon,Post-Monsoon,28.87,171.7,3.9,1.18,1.5,1.52
+2021-12-01,2021,12,Winter / Post-Monsoon,Northeast/Dry,28.52,31.7,5.0,1.03,1.79,1.22
+2022-01-01,2022,1,Winter / Post-Monsoon,Northeast/Dry,27.65,7.3,3.7,0.82,0.96,0.73
+2022-02-01,2022,2,Winter / Post-Monsoon,Northeast/Dry,28.31,10.7,3.5,0.88,1.02,0.84
+2022-03-01,2022,3,Pre-Monsoon / Summer,Pre-Monsoon,29.04,29.5,3.1,1.15,1.0,1.04
+2022-04-01,2022,4,Pre-Monsoon / Summer,Pre-Monsoon,30.04,75.5,3.7,0.99,0.96,0.82
+2022-05-01,2022,5,Pre-Monsoon / Summer,Pre-Monsoon,29.8,226.9,4.6,1.66,1.08,1.22
+2022-06-01,2022,6,Southwest Monsoon,Southwest Monsoon,28.15,932.2,7.9,3.26,11.79,7.53
+2022-07-01,2022,7,Southwest Monsoon,Southwest Monsoon,27.41,517.1,8.5,4.01,12.7,7.04
+2022-08-01,2022,8,Southwest Monsoon,Southwest Monsoon,26.62,260.1,7.8,2.32,11.68,6.21
+2022-09-01,2022,9,Southwest Monsoon,Southwest Monsoon,27.68,291.6,6.2,2.06,9.5,5.29
+2022-10-01,2022,10,Post-Monsoon,Post-Monsoon,28.54,337.9,3.5,1.24,1.19,1.57
+2022-11-01,2022,11,Post-Monsoon,Post-Monsoon,28.33,162.5,4.0,1.43,1.67,1.77
+2022-12-01,2022,12,Winter / Post-Monsoon,Northeast/Dry,28.0,33.7,4.7,1.33,1.36,0.98
+2023-01-01,2023,1,Winter / Post-Monsoon,Northeast/Dry,28.72,7.3,3.4,1.12,0.95,0.81
+2023-02-01,2023,2,Winter / Post-Monsoon,Northeast/Dry,29.13,7.9,4.6,0.5,1.39,1.1
+2023-03-01,2023,3,Pre-Monsoon / Summer,Pre-Monsoon,29.72,30.8,3.5,1.22,1.55,1.15
+2023-04-01,2023,4,Pre-Monsoon / Summer,Pre-Monsoon,30.67,70.9,4.3,1.33,0.58,0.55
+2023-05-01,2023,5,Pre-Monsoon / Summer,Pre-Monsoon,30.46,217.2,4.1,2.3,1.71,1.21
+2023-06-01,2023,6,Southwest Monsoon,Southwest Monsoon,28.81,607.3,7.0,3.43,10.31,6.2
+2023-07-01,2023,7,Southwest Monsoon,Southwest Monsoon,28.14,556.0,8.9,3.02,13.72,7.63
+2023-08-01,2023,8,Southwest Monsoon,Southwest Monsoon,27.62,454.9,7.7,3.29,11.31,6.55
+2023-09-01,2023,9,Southwest Monsoon,Southwest Monsoon,28.66,216.2,5.3,2.04,7.82,4.6
+2023-10-01,2023,10,Post-Monsoon,Post-Monsoon,29.22,267.5,4.4,1.04,1.36,1.55
+2023-11-01,2023,11,Post-Monsoon,Post-Monsoon,29.29,139.2,3.7,1.47,1.01,0.91
+2023-12-01,2023,12,Winter / Post-Monsoon,Northeast/Dry,28.79,35.8,4.1,1.28,1.32,1.23
+2024-01-01,2024,1,Winter / Post-Monsoon,Northeast/Dry,28.07,8.9,3.0,1.0,0.37,0.51
+2024-02-01,2024,2,Winter / Post-Monsoon,Northeast/Dry,28.2,10.9,4.1,1.59,1.24,1.06
+2024-03-01,2024,3,Pre-Monsoon / Summer,Pre-Monsoon,29.67,29.2,3.5,0.63,1.03,0.77
+2024-04-01,2024,4,Pre-Monsoon / Summer,Pre-Monsoon,30.3,106.9,4.1,1.86,1.27,0.87
+2024-05-01,2024,5,Pre-Monsoon / Summer,Pre-Monsoon,30.43,238.3,5.3,1.45,1.36,1.18
+2024-06-01,2024,6,Southwest Monsoon,Southwest Monsoon,28.07,555.8,7.7,3.7,11.28,6.5
+2024-07-01,2024,7,Southwest Monsoon,Southwest Monsoon,28.14,586.5,8.3,3.26,12.54,7.02
+2024-08-01,2024,8,Southwest Monsoon,Southwest Monsoon,27.59,528.2,7.3,3.14,11.14,6.56
+2024-09-01,2024,9,Southwest Monsoon,Southwest Monsoon,28.01,235.8,5.2,1.94,8.04,4.47
+2024-10-01,2024,10,Post-Monsoon,Post-Monsoon,28.65,356.4,4.4,1.23,1.23,1.57
+2024-11-01,2024,11,Post-Monsoon,Post-Monsoon,29.19,160.4,4.1,1.38,1.39,1.31
+2024-12-01,2024,12,Winter / Post-Monsoon,Northeast/Dry,28.88,38.5,3.2,0.63,1.38,1.12
+2025-01-01,2025,1,Winter / Post-Monsoon,Northeast/Dry,28.27,8.2,3.3,1.34,1.16,0.74
+2025-02-01,2025,2,Winter / Post-Monsoon,Northeast/Dry,29.05,11.8,3.5,1.3,1.05,0.93
+2025-03-01,2025,3,Pre-Monsoon / Summer,Pre-Monsoon,29.46,20.8,4.2,0.97,1.05,0.73
+2025-04-01,2025,4,Pre-Monsoon / Summer,Pre-Monsoon,29.88,87.4,3.2,1.37,0.0,0.54
+2025-05-01,2025,5,Pre-Monsoon / Summer,Pre-Monsoon,29.7,258.8,5.7,2.3,1.8,1.59
+2025-06-01,2025,6,Southwest Monsoon,Southwest Monsoon,28.49,572.2,8.5,3.26,12.44,7.31
+2025-07-01,2025,7,Southwest Monsoon,Southwest Monsoon,27.83,707.7,7.6,3.22,11.18,6.95
+2025-08-01,2025,8,Southwest Monsoon,Southwest Monsoon,27.35,339.2,6.5,2.71,10.01,5.62
+2025-09-01,2025,9,Southwest Monsoon,Southwest Monsoon,28.46,276.5,5.3,2.21,8.2,4.81
+2025-10-01,2025,10,Post-Monsoon,Post-Monsoon,28.44,287.7,3.2,0.99,0.82,1.27
+2025-11-01,2025,11,Post-Monsoon,Post-Monsoon,28.76,178.7,3.9,1.21,0.9,1.11
+2025-12-01,2025,12,Winter / Post-Monsoon,Northeast/Dry,28.48,38.2,3.4,1.15,0.91,0.96

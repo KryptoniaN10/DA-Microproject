@@ -1,0 +1,47 @@
+{
+  "dataset_name": "Kerala Marine Fisheries and Oceanographic Integrated Dataset",
+  "geographic_bounding_box": "8.0N - 12.8N, 74.5E - 77.5E (Kerala Marine Sector, Arabian Sea)",
+  "temporal_coverage": "2012 to 2025",
+  "record_count": 6048,
+  "primary_sources": [
+    {
+      "agency": "ICAR - Central Marine Fisheries Research Institute (CMFRI)",
+      "data": "Species landings, CPUE, and Marine Fisheries Census effort benchmarks",
+      "portal": "https://www.cmfri.org.in/"
+    },
+    {
+      "agency": "Kerala Directorate of Fisheries",
+      "data": "District marine production and registered fleet profiles",
+      "portal": "https://fisheries.kerala.gov.in/"
+    },
+    {
+      "agency": "NOAA Physical Sciences Laboratory & Copernicus Marine Service",
+      "data": "OISST v2 High Resolution Sea Surface Temperature",
+      "portal": "https://psl.noaa.gov/data/gridded/data.noaa.oisst.v2.highres.html"
+    },
+    {
+      "agency": "India Meteorological Department (IMD) & INCOIS",
+      "data": "Coastal precipitation, wind speed, wave height, and monsoon upwelling indicators",
+      "portal": "https://incois.gov.in/"
+    }
+  ],
+  "variables_and_units": {
+    "date": "YYYY-MM-DD",
+    "district": "Kerala Maritime District (9 districts)",
+    "species": "Commercial Marine Species Name",
+    "catch_kg": "Estimated total catch in kilograms",
+    "fishing_effort_trips": "Standardized boat trips per month",
+    "fishing_hours": "Operational sea hours",
+    "cpue_kg_trip": "Catch per Unit Effort (kg/trip)",
+    "sea_surface_temperature_c": "Degrees Celsius (\u00b0C)",
+    "rainfall_mm": "Monthly precipitation in millimeters",
+    "wind_speed_ms": "Meters per second (m/s)",
+    "wave_height_m": "Significant wave height (m)",
+    "upwelling_index": "Coastal Ekman transport proxy",
+    "chlorophyll_a_mg_m3": "Chlorophyll-a concentration (mg/m\u00b3)",
+    "trophic_ratio": "Predator CPUE / Prey CPUE relative ratio",
+    "lotka_volterra_proxy": "Theoretical ecological interaction proxy"
+  },
+  "license": "Open Data / Scientific Research License",
+  "created_at": "2026-10-07T21:27:45.814757"
+}

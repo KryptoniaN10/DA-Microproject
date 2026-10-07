@@ -1,0 +1,67 @@
+# Configuration for KAN-Based Sustainable Fishing Prediction & Decision Support System
+# Kerala Marine Fisheries
+
+project:
+  name: "KAN-Based Sustainable Fishing Prediction and Decision Support System for Kerala Fisheries"
+  version: "1.0.0"
+  region: "Kerala Coast, Arabian Sea (8.0°N - 12.8°N, 74.5°E - 77.5°E)"
+  state: "Kerala"
+  districts:
+    - "Thiruvananthapuram"
+    - "Kollam"
+    - "Alappuzha"
+    - "Ernakulam"
+    - "Thrissur"
+    - "Malappuram"
+    - "Kozhikode"
+    - "Kannur"
+    - "Kasaragod"
+
+target_species:
+  primary:
+    - name: "Oil Sardine"
+      scientific_name: "Sardinella longiceps"
+      trophic_role: "Prey / Primary Small Pelagic"
+      trophic_level: 2.3
+      base_sustainable_cpue_kg_trip: 180.0
+      spawning_season: ["June", "July", "August"] # Southwest Monsoon ban period
+    - name: "Indian Mackerel"
+      scientific_name: "Rastrelliger kanagurta"
+      trophic_role: "Intermediate Pelagic Carnivore"
+      trophic_level: 3.2
+      base_sustainable_cpue_kg_trip: 95.0
+      spawning_season: ["May", "June", "July"]
+  secondary:
+    - name: "Seer Fish"
+      scientific_name: "Scomberomorus commerson"
+      trophic_role: "Predator / Apex Pelagic (Trolling target)"
+      trophic_level: 4.1
+      base_sustainable_cpue_kg_trip: 28.0
+    - name: "Coastal Tuna"
+      scientific_name: "Euthynnus affinis"
+      trophic_role: "Predator / Pelagic Hunter"
+      trophic_level: 4.2
+      base_sustainable_cpue_kg_trip: 35.0
+
+temporal_split:
+  train_years: [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021]
+  val_years: [2022, 2023]
+  test_years: [2024, 2025]
+
+sustainability:
+  abundance_weight: 0.35
+  environmental_weight: 0.25
+  yield_weight: 0.20
+  overfishing_penalty_weight: 0.20
+  monsoon_trawling_ban_active_months: [6, 7] # June - July annual Kerala monsoon fishing ban
+  default_risk_thresholds:
+    low: 30.0
+    high: 70.0
+
+kan_hyperparameters:
+  hidden_dims: [16, 8]
+  grid_size: 5
+  spline_order: 3
+  learning_rate: 0.005
+  epochs: 150
+  weight_decay: 1e-4
