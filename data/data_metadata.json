@@ -1,0 +1,35 @@
+{
+  "metadata_version": "2.0.0",
+  "dataset_title": "Kerala Marine Fisheries Environmental & CPUE Timeseries",
+  "geographic_scope": "State of Kerala, Southwest Coast of India",
+  "districts_covered": [
+    "Thiruvananthapuram",
+    "Kollam",
+    "Alappuzha",
+    "Ernakulam",
+    "Thrissur",
+    "Malappuram",
+    "Kozhikode",
+    "Kannur",
+    "Kasaragod"
+  ],
+  "target_species": [
+    "Oil Sardine",
+    "Indian Mackerel",
+    "Seer Fish",
+    "Tuna"
+  ],
+  "temporal_range": {
+    "start": "2012-01-01",
+    "end": "2025-12-31",
+    "frequency": "Monthly"
+  },
+  "licenses_and_attribution": {
+    "atmospheric": "NASA POWER Project - Open Access (CC0 / Public Domain)",
+    "marine": "Copernicus Marine Service / Open-Meteo Open Data License (CC BY 4.0)",
+    "fisheries_catch": "ICAR-Central Marine Fisheries Research Institute (CMFRI) Open Access Publications",
+    "fleet_census": "Department of Fisheries, Government of Kerala (Open Government Data License)"
+  },
+  "target_variable": "cpue_kg_per_boat_day (Catch Per Unit Effort, metric kg / boat-day)",
+  "prediction_target": "CPUE_{t+1} (Next-month / next-quarter sustainable yield indicator)"
+}

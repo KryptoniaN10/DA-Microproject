@@ -1,0 +1,92 @@
+{
+  "dataset_name": "Kerala Marine Fisheries & Oceanographic Timeseries (2012-2025)",
+  "governing_project": "KAN-Based Sustainable Fishing Prediction & Decision Support System",
+  "last_updated": "2026-10-07T17:10:49.308576Z",
+  "spatial_coverage": "Kerala Marine Coast (8.0\u00b0N - 13.0\u00b0N, 74.5\u00b0E - 77.5\u00b0E; 9 Maritime Districts)",
+  "temporal_coverage": "2012-01 to 2025-12 (Monthly / Quarterly aggregations)",
+  "variables": {
+    "catch_tonnes": {
+      "status": "observed",
+      "source": "ICAR-Central Marine Fisheries Research Institute (CMFRI) Annual Marine Fish Landings in India Technical Reports (2012-2024)",
+      "source_url": "https://eprints.cmfri.org.in/",
+      "units": "Metric Tonnes",
+      "spatial_resolution": "District-level aggregation across Kerala coast",
+      "temporal_resolution": "Annual totals & quarterly distributions partitioned to monthly series",
+      "proxy_method": "None (Direct official statistics aligned to CMFRI state landing bulletins)"
+    },
+    "species_composition": {
+      "status": "observed",
+      "source": "CMFRI Fishery Resources Assessment Division (FRAD/FRAEED) species-wise landings",
+      "source_url": "https://eprints.cmfri.org.in/",
+      "target_taxa": [
+        "Oil Sardine (Sardinella longiceps)",
+        "Indian Mackerel (Rastrelliger kanagurta)",
+        "Seer Fish (Scomberomorus commerson)",
+        "Tuna (Thunnus/Euthynnus spp.)"
+      ],
+      "proxy_method": "None"
+    },
+    "fishing_effort_boat_days": {
+      "status": "derived_proxy",
+      "source": "CMFRI Marine Fisheries Census (2010/2016/2020) & Kerala Marine Fisheries Statistics",
+      "source_url": "https://fisheries.kerala.gov.in/",
+      "units": "Standard Boat-Days / Operating Unit Trips",
+      "reason_for_proxy": "Continuous vessel-by-vessel electronic logbook data is not public for Indian artisanal/mechanized fleets.",
+      "proxy_method": "District registered active fleet capacity modulated by seasonal operational factors (52-day monsoon ban, post-monsoon surge)."
+    },
+    "sea_surface_temperature_c": {
+      "status": "observed",
+      "source": "NOAA OISST v2.1 via NCEI ERDDAP / Open-Meteo Marine Copernicus Marine Service",
+      "source_url": "https://marine-api.open-meteo.com/v1/marine",
+      "units": "Degrees Celsius (\u00b0C)",
+      "temporal_resolution": "Monthly mean",
+      "proxy_method": "None (Observed satellite & reanalysis marine SST)"
+    },
+    "rainfall_mm": {
+      "status": "observed",
+      "source": "NASA Prediction Of Worldwide Energy Resources (POWER) API (MERRA-2 / GPCP)",
+      "source_url": "https://power.larc.nasa.gov/",
+      "units": "Millimeters (mm/month)",
+      "proxy_method": "None (Observed satellite-gauge precipitation)"
+    },
+    "wind_speed_ms": {
+      "status": "observed",
+      "source": "NASA POWER API (10m surface wind speed)",
+      "source_url": "https://power.larc.nasa.gov/",
+      "units": "Meters per second (m/s)",
+      "proxy_method": "None"
+    },
+    "air_temperature_c": {
+      "status": "observed",
+      "source": "NASA POWER API (2m air temperature)",
+      "source_url": "https://power.larc.nasa.gov/",
+      "units": "Degrees Celsius (\u00b0C)",
+      "proxy_method": "None"
+    },
+    "wave_height_m": {
+      "status": "observed",
+      "source": "Open-Meteo Marine / ECMWF WAM wave model",
+      "source_url": "https://marine-api.open-meteo.com/v1/marine",
+      "units": "Meters (significant wave height)",
+      "proxy_method": "None"
+    },
+    "chlorophyll_a_mg_m3": {
+      "status": "derived_proxy",
+      "source": "Derived from Bakun Upwelling Index and coastal precipitation runoff",
+      "units": "mg/m\u00b3",
+      "reason_for_proxy": "MODIS/VIIRS ocean color products suffer high cloud obscuration during SW monsoon along Kerala coast.",
+      "proxy_method": "Coastal upwelling index and precipitation nutrient-flux transfer function."
+    },
+    "upwelling_index": {
+      "status": "derived_proxy",
+      "source": "Bakun Coastal Upwelling Index derived from alongshore wind stress and SST gradients",
+      "units": "Dimensionless Index [0.0 - 1.0]",
+      "proxy_method": "Alongshore wind-stress component calculation."
+    },
+    "trolling_telemetry": {
+      "status": "unavailable",
+      "reason_for_proxy": "Real-time vessel GPS trolling lines & lure speed data are not collected by public state statistical departments.",
+      "proxy_choice": "Trolling suitability index modeled empirically via pelagic tuna/seer presence, wave height constraints, and offshore distance envelope."
+    }
+  }
+}

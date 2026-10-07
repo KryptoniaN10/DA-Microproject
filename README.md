@@ -1,138 +1,104 @@
-# KAN-Based Sustainable Fishing Prediction and Decision Support System for Kerala Fisheries 🐟📊
+# KAN-Based Sustainable Fishing Prediction and Decision Support System for Kerala Fisheries
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-orange.svg)](https://pytorch.org/)
-[![Jupyter](https://img.shields.io/badge/Jupyter-Notebooks-informational.svg)](https://jupyter.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-
-An end-to-end Machine Learning and Data Analytics decision-support platform for marine fisheries along the **Kerala coast (Southeastern Arabian Sea)**.
-
-The system uses **Kolmogorov-Arnold Networks (KAN)** with learnable 1D B-spline activation functions on network edges to model complex non-linear interactions between oceanographic drivers, fishing effort, historical Catch Per Unit Effort (CPUE), and multi-species ecological proxies.
+An explainable, data-driven machine learning platform for sustainable fisheries management along the Kerala coast (8.0°N–13.0°N, 74.5°E–77.5°E). Uses **Kolmogorov-Arnold Networks (KAN)** with learnable B-spline edge activations and **Constrained Effort Optimization** to forecast fish abundance ({t+1}$), prevent recruitment overfishing, and guide artisanal trolling operations.
 
 ---
 
-## 📌 Key Objectives & Scientific Distinctions
+## Key Features
 
-1. **Abundance vs. Catch Disentanglement**:
-   Catch is NOT abundance. High catch can occur purely due to heavy fishing pressure. We normalize landing data by fishing effort (standardized boat trips) to derive true **Catch Per Unit Effort (CPUE)** as an abundance proxy:
-   $$\text{CPUE} = \frac{\text{Catch (kg)}}{\text{Standardized Fishing Effort (Trips)}}$$
-
-2. **Sustainability-First Objective**:
-   The goal is NOT to blindly maximize catch, but to:
-   > *"Find fishing periods that provide a high expected yield while keeping fish abundance indicators above sustainable biological thresholds and reducing overfishing risk."*
-
-3. **Kolmogorov-Arnold Networks (KAN) with Explainability**:
-   Unlike black-box Multi-Layer Perceptrons (MLPs), KAN places learnable univariate B-splines $\phi(x)$ on network edges:
-   $$f(x) = \sum_{q=1}^{2n+1} \Phi_q \left( \sum_{p=1}^n \phi_{q,p}(x_p) \right)$$
-   This enables direct visual extraction of learned physical curves (e.g. thermal response envelopes, upwelling benefits, and overfishing penalties).
-
-4. **Zero-Leakage Chronological Evaluation**:
-   Strict forward temporal splitting:
-   - **Training Set**: 2012 – 2021 (10 years)
-   - **Validation Set**: 2022 – 2023 (2 years)
-   - **Out-of-Sample Test Set**: 2024 – 2025 (2 years)
+1. **Real Data Ingestion & Availability Gate:** Real-time data acquisition from **NASA POWER API** (Atmospheric Climate), **Copernicus Marine / NOAA OISST v2.1** (SST & Wave Height), and **ICAR-CMFRI** (Marine Fish Landings Technical Reports, 2012–2024) across 9 maritime districts and 4 key species (*Oil Sardine, Indian Mackerel, Seer Fish, Tuna*).
+2. **Epistemological Source Ledger:** Every variable is tagged as observed, derived_proxy, or unavailable in data/raw/source_ledger.json.
+3. **Multi-Model Chronological Benchmark:** Strict out-of-sample holdout test (Train: 2012–2021, Val: 2022–2023, Test: 2024–2025) comparing Linear Regression, Ridge, Random Forest, Gradient Boosting, XGBoost, MLP, and KAN.
+4. **Intrinsic KAN Interpretability:** Mathematical extraction of 1D univariate B-spline response curves $\\phi_i(x)$ for continuous ecological explainability without post-hoc black-box surrogates.
+5. **Sustainable Decision Support Engine:** Constrained effort grid optimization, Dynamic Fishing Window evaluation, Overfishing Risk scoring, and Pelagic Trolling Suitability analysis.
 
 ---
 
-## 🗂️ Project Repository Structure
+## Project Structure
 
-```
-e:\DA microproject\
-├── config\
-│   └── config.yaml                          # Master parameters, species baselines, thresholds
-├── data\
-│   ├── raw\                                 # Sourced CMFRI, Kerala Fisheries & NOAA datasets
-│   │   ├── cmfri_kerala_species_landings.csv
-│   │   ├── kerala_fishing_effort_boats.csv
-│   │   ├── imd_copernicus_kerala_coastal_env.csv
-│   │   └── data_metadata.json
-│   └── processed\                           # Cleaned, validated & feature-engineered datasets
-│       ├── integrated_kerala_fisheries_env.csv
-│       ├── oil_sardine_timeseries.csv
-│       ├── indian_mackerel_timeseries.csv
-│       └── data_quality_report.json
-├── models\                                  # Serialized model weights & scalers
-│   ├── kan_oil_sardine.pt
-│   ├── baseline_models.joblib
-│   ├── scaler_X.joblib
-│   └── scaler_y.joblib
-├── notebooks\                               # Complete interactive Jupyter Notebook suite
-│   ├── 01_Data_Exploration_and_Preprocessing.ipynb
-│   ├── 02_KAN_Sustainable_Fisheries_Modeling.ipynb
-│   ├── 03_Decision_Support_and_Optimization.ipynb
-│   └── Master_KAN_Kerala_Fisheries_System.ipynb # Unified end-to-end Master Notebook
-├── reports\                                 # Research and data audit documents
-│   ├── DATA_AVAILABILITY_REPORT.md
-│   ├── RESEARCH_REPORT.md
-│   └── MODEL_COMPARISON.md
-├── src\                                     # Modular Python source library
-│   ├── data\
-│   │   ├── fetch_and_clean.py
-│   │   └── validate_data.py
-│   ├── features\
+`	ext
+DA-microproject/
+├── data/
+│   ├── raw/                      # Real acquired climate, marine, and CMFRI data
+│   │   ├── source_ledger.json    # Machine-readable variable source ledger
+│   │   └── kerala_marine_fisheries_raw.csv
+│   ├── processed/                # Species timeseries & data quality report
+│   └── data_metadata.json        # Comprehensive dataset schema & licensing metadata
+├── notebooks/
+│   └── KAN_Sustainable_Fisheries_Kerala_Master.ipynb # End-to-end executed master notebook
+├── reports/
+│   ├── DATA_AVAILABILITY_REPORT.md # Per-source audit & proxy documentation
+│   ├── MODEL_COMPARISON.md       # Chronological benchmark results & analysis
+│   └── RESEARCH_REPORT.md        # Technical research report & policy guidelines
+├── models/
+│   └── experiment_tracking.json  # Complete experiment tracking logs
+├── src/
+│   ├── data/                     # Data acquisition, validation, & fallback modules
+│   │   ├── fetch_real_data.py
+│   │   ├── validate_data.py
+│   │   └── demonstration_fallback.py
+│   ├── features/                 # Lag engineering & chronological splits
 │   │   └── engineer_features.py
-│   ├── models\
-│   │   ├── baselines.py
+│   ├── models/                   # KAN PyTorch architecture & baselines
 │   │   ├── kan_model.py
+│   │   ├── baselines.py
 │   │   └── evaluate.py
-│   ├── prediction\
-│   │   └── predictor.py
-│   └── optimization\
-│       ├── sustainability.py
-│       └── fishing_window.py
-├── run_full_pipeline.py                     # One-click execution script
-├── generate_notebooks.py                    # Notebook compilation script
-├── requirements.txt                         # Python dependencies
+│   ├── optimization/             # Sustainability & effort optimization
+│   │   ├── sustainability.py
+│   │   └── fishing_window.py
+│   └── prediction/               # Inference & decision support predictor
+│       └── predictor.py
+├── requirements.txt
 └── README.md
-```
+`
 
 ---
 
-## 📊 Model Performance Comparison (Test Set: 2024–2025)
+## Quickstart Guide
 
-| Model Architecture | Test MAE (kg/trip) | Test RMSE (kg/trip) | Test $R^2$ Score | Test MAPE (%) | Interpretability |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Linear Regression** | 791.85 | 1192.37 | 0.7740 | 71.66% | High (Linear only) |
-| **Ridge Regression** | 794.69 | 1199.93 | 0.7712 | 71.69% | High (Linear only) |
-| **Multi-Layer Perceptron (MLP)** | 757.31 | 1175.37 | 0.7804 | 58.62% | Low (Black-box) |
-| **Gradient Boosting** | 398.03 | 693.70 | 0.9235 | 18.96% | Medium (Trees) |
-| **XGBoost Regressor** | 384.08 | 683.38 | 0.9258 | 19.37% | Medium (Trees) |
-| **Random Forest Regressor** | 369.17 | 657.26 | 0.9313 | 18.62% | Medium (Trees) |
-| **Kolmogorov-Arnold Network (KAN)** | **508.92** | **799.21** | **0.8985** | **30.78%** | **High (Univariate 1D Splines)** |
-
----
-
-## 🚀 Quickstart Guide
-
-### 1. Clone & Install Dependencies
-```bash
-cd "e:/DA microproject"
+### 1. Installation
+Ensure Python 3.10+ is installed, then install dependencies:
+`ash
 pip install -r requirements.txt
-```
+`
 
-### 2. Execute Full End-to-End Pipeline
-```bash
-python run_full_pipeline.py
-```
+### 2. Fetch Real Data & Validate
+Run the data acquisition and validation pipeline:
+`ash
+python src/data/fetch_real_data.py
+python src/data/validate_data.py
+`
 
-### 3. Launch the Interactive Jupyter Notebooks
-```bash
-jupyter notebook notebooks/Master_KAN_Kerala_Fisheries_System.ipynb
-```
-Or explore individual modular notebooks:
-- [01_Data_Exploration_and_Preprocessing.ipynb](file:///e:/DA%20microproject/notebooks/01_Data_Exploration_and_Preprocessing.ipynb)
-- [02_KAN_Sustainable_Fisheries_Modeling.ipynb](file:///e:/DA%20microproject/notebooks/02_KAN_Sustainable_Fisheries_Modeling.ipynb)
-- [03_Decision_Support_and_Optimization.ipynb](file:///e:/DA%20microproject/notebooks/03_Decision_Support_and_Optimization.ipynb)
+### 3. Run Benchmark & Experiment Tracking
+Train all models and generate the benchmark report:
+`ash
+python src/models/evaluate.py
+`
+
+### 4. Run the Master Research Notebook
+Launch the end-to-end Master Notebook:
+`ash
+jupyter notebook notebooks/KAN_Sustainable_Fisheries_Kerala_Master.ipynb
+`
+Or execute headlessly:
+`ash
+jupyter nbconvert --to notebook --execute notebooks/KAN_Sustainable_Fisheries_Kerala_Master.ipynb --output KAN_Sustainable_Fisheries_Kerala_Master.ipynb
+`
 
 ---
 
-## 🔬 Core Decision-Support Indicators
+## Research Questions & Hypotheses
 
-- **Fishing Suitability Score ($0 - 100$)**:
-  $$\text{Suitability} = 0.35 \cdot S_{\text{abundance}} + 0.25 \cdot S_{\text{env}} + 0.20 \cdot S_{\text{yield}} - 0.20 \cdot R_{\text{overfishing}}$$
-- **Overfishing Risk Score ($0 - 100$ & Low/Medium/High)**:
-  $$\text{Risk} \propto \text{Fishing Pressure} \times \text{Abundance Deficit} \times \text{Declining CPUE Momentum}$$
-- **Constrained Safe Effort Optimization**:
-  $$\max_{\text{Effort}} \text{Expected Catch} \quad \text{s.t.} \quad \text{Risk} \le 45.0, \; \hat{A}_t \ge A_{\text{thresh}}$$
-- **Trolling Suitability Engine**:
-  Evaluates wave height ($< 1.8\text{m}$), wind velocity ($3.0 - 6.0\text{ m/s}$), and surface thermal window for apex gamefish (Seer Fish & Tuna).
+- **RQ1 (Forecasting):** Real environmental lags and autoregressive terms forecast next-period CPUE (^2 \\approx 0.80$ with tree ensembles).
+- **RQ2 (KAN Benchmark):** KAN outperforms linear and MLP models on validation data (^2 = 0.4253$ vs .0756$ linear, $-0.1196$ MLP) and offers lower test RMSE (.72$ vs .18$ linear).
+- **RQ3 (Interpretability):** Learned B-splines reveal non-monotonic SST thermal optima (27.5–29.0°C) and fishing effort saturation thresholds.
+- **RQ4 (Optimization):** Constrained optimization constrains Overfishing Risk to $<35\\%$ while preserving fleet economic returns.
+- **RQ5 (Trolling Advisory):** Composite index provides actionable daily trolling recommendations for artisanal fishers.
+
+---
+
+## Data Licenses & Attribution
+- **NASA POWER:** Public Domain / CC0 Open Data.
+- **Copernicus Marine / Open-Meteo:** CC BY 4.0.
+- **ICAR-CMFRI:** Open Access Scientific Technical Publications, Govt. of India.
+- **Kerala Fisheries:** Open Government Data License (OGDL).

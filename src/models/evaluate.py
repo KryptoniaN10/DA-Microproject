@@ -5,10 +5,20 @@ Implements chronological split evaluation:
 - Validation: 2022-2023
 - Testing: 2024-2025
 Computes MAE, RMSE, R², MAPE, and directional accuracy.
+Saves comprehensive experiment tracking metadata to models/experiment_tracking.json.
 """
 
 import os
+import sys
 import time
+import json
+from datetime import datetime
+
+# Ensure project root is available for imports
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
+
 import torch
 import torch.nn as nn
 import numpy as np
@@ -37,9 +47,10 @@ def compute_metrics(y_true, y_pred):
         "MAPE": round(mape, 2)
     }
 
-def train_and_evaluate_all(df_feat, target_col="target_cpue_next", epochs=150, lr=0.005):
+def train_and_evaluate_all(df_feat, target_col="target_cpue_next", epochs=150, lr=0.005, save_experiments=True):
     """
-    Executes full chronological training, validation, and test evaluation.
+    Executes full chronological training, validation, and test evaluation across all models.
+    Logs structured experiment tracking metadata.
     """
     feature_cols = get_feature_columns()
     
@@ -69,6 +80,21 @@ def train_and_evaluate_all(df_feat, target_col="target_cpue_next", epochs=150, l
     
     results = []
     trained_models = {}
+    experiment_log = {
+        "timestamp": datetime.now().isoformat(),
+        "target_species": str(df_feat["species"].iloc[0]) if "species" in df_feat.columns else "Oil Sardine",
+        "feature_count": len(feature_cols),
+        "features": feature_cols,
+        "splits": {
+            "train_period": "2012-2021",
+            "train_samples": int(train_mask.sum()),
+            "val_period": "2022-2023",
+            "val_samples": int(val_mask.sum()),
+            "test_period": "2024-2025",
+            "test_samples": int(test_mask.sum())
+        },
+        "experiments": []
+    }
     
     # 1. Train and Evaluate Baseline Models
     baselines = get_baseline_models()
@@ -98,6 +124,14 @@ def train_and_evaluate_all(df_feat, target_col="target_cpue_next", epochs=150, l
         })
         trained_models[name] = model
         
+        experiment_log["experiments"].append({
+            "model_name": name,
+            "hyperparameters": str(model.get_params()) if hasattr(model, "get_params") else {},
+            "train_time_sec": round(train_time, 3),
+            "validation_metrics": val_metrics,
+            "test_metrics": test_metrics
+        })
+        
     # 2. Train and Evaluate Kolmogorov-Arnold Network (KAN)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     in_features = len(feature_cols)
@@ -109,7 +143,7 @@ def train_and_evaluate_all(df_feat, target_col="target_cpue_next", epochs=150, l
     ).to(device)
     
     criterion = nn.MSELoss()
-    optimizer = torch.optim.AdamW(kan.parameters(), lr=0.01, weight_decay=1e-4)
+    optimizer = torch.optim.AdamW(kan.parameters(), lr=lr, weight_decay=1e-4)
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.5, patience=12)
     
     X_train_t = torch.tensor(X_train, dtype=torch.float32).to(device)
@@ -174,6 +208,20 @@ def train_and_evaluate_all(df_feat, target_col="target_cpue_next", epochs=150, l
     })
     trained_models["KAN"] = kan
     
+    experiment_log["experiments"].append({
+        "model_name": "Kolmogorov-Arnold Network (KAN)",
+        "architecture": f"KANLinear[{in_features}->16->8->1], grid=5, order=3",
+        "hyperparameters": {"epochs": epochs, "lr": lr, "weight_decay": 1e-4, "optimizer": "AdamW"},
+        "train_time_sec": round(train_time, 3),
+        "validation_metrics": val_metrics_kan,
+        "test_metrics": test_metrics_kan
+    })
+    
+    if save_experiments:
+        os.makedirs("models", exist_ok=True)
+        with open("models/experiment_tracking.json", "w", encoding="utf-8") as f:
+            json.dump(experiment_log, f, indent=2)
+            
     df_results = pd.DataFrame(results)
     
     return {
@@ -186,9 +234,10 @@ def train_and_evaluate_all(df_feat, target_col="target_cpue_next", epochs=150, l
     }
 
 if __name__ == "__main__":
-    from src.data.fetch_and_clean import generate_fisheries_environmental_dataset
+    import sys
+    sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
+    df = pd.read_csv("data/raw/kerala_marine_fisheries_raw.csv")
     from src.features.engineer_features import engineer_fisheries_features
-    df = generate_fisheries_environmental_dataset()
     df_feat = engineer_fisheries_features(df, "Oil Sardine")
     out = train_and_evaluate_all(df_feat)
     print(out["results_df"][["Model", "Val_R2", "Test_R2", "Test_MAE", "Test_RMSE"]])

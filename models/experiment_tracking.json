@@ -1,0 +1,164 @@
+{
+  "timestamp": "2026-10-07T22:44:08.537909",
+  "target_species": "Oil Sardine",
+  "feature_count": 22,
+  "features": [
+    "sea_surface_temperature_c",
+    "sst_anomaly",
+    "rainfall_mm",
+    "wind_speed_ms",
+    "wave_height_m",
+    "upwelling_index",
+    "chlorophyll_a_mg_m3",
+    "fishing_effort_trips",
+    "fishing_pressure",
+    "is_monsoon_ban",
+    "cpue_lag_1",
+    "cpue_lag_2",
+    "cpue_lag_3",
+    "cpue_lag_12",
+    "cpue_rolling_mean_3",
+    "cpue_change_1m",
+    "prey_index",
+    "predator_index",
+    "trophic_ratio",
+    "lotka_volterra_proxy",
+    "month_sin",
+    "month_cos"
+  ],
+  "splits": {
+    "train_period": "2012-2021",
+    "train_samples": 1053,
+    "val_period": "2022-2023",
+    "val_samples": 216,
+    "test_period": "2024-2025",
+    "test_samples": 207
+  },
+  "experiments": [
+    {
+      "model_name": "Linear Regression",
+      "hyperparameters": "{'copy_X': True, 'fit_intercept': True, 'n_jobs': None, 'positive': False, 'tol': 1e-06}",
+      "train_time_sec": 0.009,
+      "validation_metrics": {
+        "MAE": 218.433,
+        "RMSE": 319.905,
+        "R2": 0.0756,
+        "MAPE": 29.58
+      },
+      "test_metrics": {
+        "MAE": 205.463,
+        "RMSE": 299.179,
+        "R2": -1.0652,
+        "MAPE": 31.12
+      }
+    },
+    {
+      "model_name": "Ridge Regression",
+      "hyperparameters": "{'alpha': 1.0, 'copy_X': True, 'fit_intercept': True, 'max_iter': None, 'positive': False, 'random_state': None, 'solver': 'auto', 'tol': 0.0001}",
+      "train_time_sec": 0.006,
+      "validation_metrics": {
+        "MAE": 217.06,
+        "RMSE": 318.733,
+        "R2": 0.0824,
+        "MAPE": 29.41
+      },
+      "test_metrics": {
+        "MAE": 205.352,
+        "RMSE": 298.684,
+        "R2": -1.0583,
+        "MAPE": 31.11
+      }
+    },
+    {
+      "model_name": "Random Forest",
+      "hyperparameters": "{'bootstrap': True, 'ccp_alpha': 0.0, 'criterion': 'squared_error', 'max_depth': 12, 'max_features': 1.0, 'max_leaf_nodes': None, 'max_samples': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 4, 'min_weight_fraction_leaf': 0.0, 'monotonic_cst': None, 'n_estimators': 100, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}",
+      "train_time_sec": 0.306,
+      "validation_metrics": {
+        "MAE": 101.063,
+        "RMSE": 132.718,
+        "R2": 0.8409,
+        "MAPE": 10.67
+      },
+      "test_metrics": {
+        "MAE": 68.446,
+        "RMSE": 96.74,
+        "R2": 0.7841,
+        "MAPE": 9.14
+      }
+    },
+    {
+      "model_name": "Gradient Boosting",
+      "hyperparameters": "{'alpha': 0.9, 'ccp_alpha': 0.0, 'criterion': 'friedman_mse', 'init': None, 'learning_rate': 0.08, 'loss': 'squared_error', 'max_depth': 5, 'max_features': None, 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 100, 'n_iter_no_change': None, 'random_state': 42, 'subsample': 1.0, 'tol': 0.0001, 'validation_fraction': 0.1, 'verbose': 0, 'warm_start': False}",
+      "train_time_sec": 0.946,
+      "validation_metrics": {
+        "MAE": 115.622,
+        "RMSE": 151.567,
+        "R2": 0.7925,
+        "MAPE": 12.15
+      },
+      "test_metrics": {
+        "MAE": 62.814,
+        "RMSE": 93.079,
+        "R2": 0.8001,
+        "MAPE": 8.28
+      }
+    },
+    {
+      "model_name": "Multi-Layer Perceptron (MLP)",
+      "hyperparameters": "{'activation': 'relu', 'alpha': 0.0001, 'batch_size': 'auto', 'beta_1': 0.9, 'beta_2': 0.999, 'early_stopping': False, 'epsilon': 1e-08, 'hidden_layer_sizes': (64, 32), 'learning_rate': 'constant', 'learning_rate_init': 0.001, 'loss': 'squared_error', 'max_fun': 15000, 'max_iter': 300, 'momentum': 0.9, 'n_iter_no_change': 10, 'nesterovs_momentum': True, 'power_t': 0.5, 'random_state': 42, 'shuffle': True, 'solver': 'adam', 'tol': 0.0001, 'validation_fraction': 0.1, 'verbose': False, 'warm_start': False}",
+      "train_time_sec": 0.817,
+      "validation_metrics": {
+        "MAE": 250.355,
+        "RMSE": 352.059,
+        "R2": -0.1196,
+        "MAPE": 35.08
+      },
+      "test_metrics": {
+        "MAE": 240.426,
+        "RMSE": 347.666,
+        "R2": -1.7888,
+        "MAPE": 35.38
+      }
+    },
+    {
+      "model_name": "XGBoost",
+      "hyperparameters": "{'objective': 'reg:squarederror', 'base_score': None, 'booster': None, 'callbacks': None, 'colsample_bylevel': None, 'colsample_bynode': None, 'colsample_bytree': None, 'device': None, 'early_stopping_rounds': None, 'enable_categorical': True, 'eval_metric': None, 'feature_types': None, 'feature_weights': None, 'gamma': None, 'grow_policy': None, 'importance_type': None, 'interaction_constraints': None, 'learning_rate': 0.08, 'max_bin': None, 'max_cat_threshold': None, 'max_cat_to_onehot': None, 'max_delta_step': None, 'max_depth': 5, 'max_leaves': None, 'min_child_weight': None, 'missing': nan, 'monotone_constraints': None, 'multi_strategy': None, 'n_estimators': 100, 'n_jobs': -1, 'num_parallel_tree': None, 'random_state': 42, 'reg_alpha': None, 'reg_lambda': None, 'sampling_method': None, 'scale_pos_weight': None, 'subsample': None, 'tree_method': None, 'validate_parameters': None, 'verbosity': None}",
+      "train_time_sec": 2.049,
+      "validation_metrics": {
+        "MAE": 99.434,
+        "RMSE": 124.075,
+        "R2": 0.8609,
+        "MAPE": 11.43
+      },
+      "test_metrics": {
+        "MAE": 68.429,
+        "RMSE": 93.494,
+        "R2": 0.7983,
+        "MAPE": 9.2
+      }
+    },
+    {
+      "model_name": "Kolmogorov-Arnold Network (KAN)",
+      "architecture": "KANLinear[22->16->8->1], grid=5, order=3",
+      "hyperparameters": {
+        "epochs": 150,
+        "lr": 0.005,
+        "weight_decay": 0.0001,
+        "optimizer": "AdamW"
+      },
+      "train_time_sec": 3.18,
+      "validation_metrics": {
+        "MAE": 189.713,
+        "RMSE": 252.243,
+        "R2": 0.4253,
+        "MAPE": 24.39
+      },
+      "test_metrics": {
+        "MAE": 208.377,
+        "RMSE": 280.724,
+        "R2": -0.8182,
+        "MAPE": 30.79
+      }
+    }
+  ]
+}
